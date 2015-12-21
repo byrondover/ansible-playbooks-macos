@@ -1,0 +1,5 @@
+---
+- command: virtualenv {{ virtualenv_location }} creates={{ virtualenv_location }}
+
+- pip: name={{ item }} virtualenv={{ virtualenv_location }}
+  with_items: "{{ pip_packages }}"

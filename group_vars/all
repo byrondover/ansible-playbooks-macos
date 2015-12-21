@@ -1,0 +1,34 @@
+---
+homebrew_packages:
+  - caskroom/cask/brew-cask
+  - coreutils
+  - htop-osx
+  - iftop
+  - python
+  - mysql
+  - nload
+  - nmap
+  - node
+  - swaks
+  - tmux
+  - tree
+
+homebrew_custom_packages:
+  ffmpeg: with-faac,with-fdk-aac,with-ffplay,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libquvi,with-libsoxr,with-libssh,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-schroedinger,with-snappy,with-speex,with-theora,with-tools,with-webp,with-x265,with-zeromq
+  wget: with-iri
+  youtube-dl: with-rtmpdump
+
+homebrew_cask_packages:
+  - deluge
+  - flux
+  - sequel-pro
+  - textmate
+  - transmit
+  - tripmode
+  - vlc
+
+pip_packages:
+  - python-daemon
+  - requests
+
+virtualenv_location: /Users/byron/venv

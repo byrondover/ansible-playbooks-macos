@@ -1,0 +1,8 @@
+---
+# Map hosts to roles.
+
+- hosts: local
+  
+  roles:
+    - homebrew
+    - pip
