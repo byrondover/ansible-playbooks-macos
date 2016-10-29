@@ -1,36 +1,61 @@
 ---
-homebrew_packages:
-  - caskroom/cask/brew-cask
-  - coreutils
-  - htop-osx
-  - iftop
-  - python
-  - mysql
-  - nload
-  - nmap
-  - node
-  - swaks
-  - tmux
-  - tree
-  - zsh
+atom_packages:
+  - atom-typescript
+  - language-docker
+  - language-groovy
+  - language-puppet
+  - markdown-toc
+  - pretty-json
 
-homebrew_custom_packages:
-  ffmpeg: with-faac,with-fdk-aac,with-ffplay,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libquvi,with-libsoxr,with-libssh,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-schroedinger,with-snappy,with-speex,with-theora,with-tools,with-webp,with-x265,with-zeromq
-  wget: with-iri
-  youtube-dl: with-rtmpdump
+homebrew_packages:
+  - name: ansible
+  - name: coreutils
+  - name: cowsay
+  - name: ffmpeg
+    options: with-faac,with-fdk-aac,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libebur128,with-libsoxr,with-libssh,with-libtesseract,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openh264,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-rubberband,with-schroedinger,with-snappy,with-speex,with-tesseract,with-theora,with-tools,with-webp,with-x265,with-xz,with-zimg
+  - name: fortune
+  - name: gnu-typist
+  - name: go
+  - name: httpie
+  - name: htop-osx
+  - name: hugo
+  - name: p7zip
+  - name: python3
+  - name: mysql
+  - name: nmap
+  - name: node
+    options: with-debug
+  - name: tmux
+  - name: tree
+  - name: watch
+  - name: wget
+    options: with-iri
+  - name: youtube-dl
+    options: with-rtmpdump
+
+homebrew_taps:
+  - caskroom/cask
 
 homebrew_cask_packages:
   - deluge
   - flux
-  - googleappengine
+#  - googleappengine
+  - handbrake
+  - jumpcut
   - sequel-pro
-  - textmate
-  - transmit
+  - shiftit
+  - slack
+#  - textmate
+#  - transmit
   - tripmode
   - vlc
 
+home_subdirectories:
+  - bin
+  - code/workshop
+  - tmp
+
 pip_packages:
-  - python-daemon
   - requests
 
-virtualenv_location: /Users/byron/venv
+virtualenv_location: ~/venv

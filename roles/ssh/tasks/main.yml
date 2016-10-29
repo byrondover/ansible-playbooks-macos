@@ -1,0 +1,12 @@
+---
+- name: Create private .ssh directory.
+  file: path=~/.ssh
+        state=directory
+        mode="u=rwx,g=,o="
+
+- name: Copy public and private keys into place.
+  copy: src={{ item }}
+        dest=~/.ssh/
+        mode="u=rw,g=,o="
+  with_fileglob: ~/Drive/Shared/Private/ssh/*
+  failed_when: no

@@ -1,0 +1,5 @@
+---
+- name: Install Atom packages.
+  apm: name={{ item }}
+       state=present
+  with_items: "{{ atom_packages }}"

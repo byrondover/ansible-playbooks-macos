@@ -1,5 +1,16 @@
 ---
-- command: virtualenv {{ virtualenv_location }} creates={{ virtualenv_location }}
+- name: Update pip, setuptools, wheel and virtualenv.
+  pip: name={{ item }}
+       state=latest
+       executable=pip3
+       virtualenv_python=python3
+  with_items:
+    - pip
+    - setuptools
+    - virtualenv
+    - wheel
 
-- pip: name={{ item }} virtualenv={{ virtualenv_location }}
+- pip: name={{ item }}
+       virtualenv={{ virtualenv_location }}
+       virtualenv_python=python3
   with_items: "{{ pip_packages }}"

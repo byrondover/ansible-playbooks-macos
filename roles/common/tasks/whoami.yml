@@ -1,0 +1,7 @@
+---
+- name: Register current Ansible user.
+  become: no
+  local_action:
+    command whoami
+  register: whoami
+  changed_when: no

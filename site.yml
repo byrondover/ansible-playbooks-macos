@@ -1,8 +1,19 @@
 ---
-# Map hosts to roles.
+# file: site.yml
+# description: Ansible playbook for bootstrapping fresh macOS installs.
 
 - hosts: local
-  
+
+  pre_tasks:
+    - include: roles/common/tasks/whoami.yml
+    - include: roles/common/tasks/home_subdirs.yml
+
   roles:
+    - setup
+    - plists
+    - ssh
+    - dotfiles
     - homebrew
     - pip
+    - zsh
+    - atom

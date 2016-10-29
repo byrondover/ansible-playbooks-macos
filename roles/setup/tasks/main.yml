@@ -1,3 +1,33 @@
 ---
-# run: sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-# creates: /var/db/locate.database
+- name: Copy nopasswd sudoers file into place, after passing validation with visudo.
+  become: yes
+  copy: dest=/etc/sudoers.d/00-admin-all-nopasswd
+        content="%admin ALL=(ALL) NOPASSWD{{ ':' }} ALL"
+        validate='visudo -cf %s'
+
+- name: Register current system policy settings.
+  become: yes
+  command: spctl --status
+  register: spctl_status
+  changed_when: no
+  failed_when: spctl_status.rc not in (0, 1)
+
+- name: Disable system policy assessments.
+  become: yes
+  command: spctl --master-disable
+  when: spctl_status.stdout == 'assessments enabled'
+
+- name: Register current ~/Library directory flags.
+  command: ls -dlO ~/Library
+  register: ls_library
+  changed_when: no
+
+- name: Unhide ~/Library directory.
+  command: chflags nohidden ~/Library
+  when: "'hidden' in ls_library.stdout"
+
+- name: Create locate database.
+  become: yes
+  command: launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+  args:
+    creates: /var/db/locate.database

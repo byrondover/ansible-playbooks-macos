@@ -1,0 +1,5 @@
+---
+- name: Create common home subdirectories.
+  file: path=~/{{ item }}
+        state=directory
+  with_items: "{{ home_subdirectories }}"

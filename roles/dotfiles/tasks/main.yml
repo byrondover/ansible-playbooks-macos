@@ -1,2 +1,23 @@
 ---
-- file: path=/Users/byron/.vim/colors state=directory
+- name: Purge temporary macos-plists directory.
+  file: name=~/tmp/dotfiles-light
+        state=absent
+  changed_when: no
+
+- name: Clone dotfiles-light repository.
+  git: repo=https://github.com/byrondover/dotfiles-light.git
+       dest=~/tmp/dotfiles-light
+  changed_when: no
+
+- name: Copy custom dotfiles into place.
+  command: ~/tmp/dotfiles-light/install.sh
+  args:
+    chdir: ~/tmp/dotfiles-light
+    creates: ~/.vimrc
+
+- name: Copy private dotfiles into place.
+  copy: src={{ item }}
+        dest=~/.{{ item.split('/') | last }}
+        mode="u=rw,g=,o="
+  with_fileglob: ~/Drive/Shared/Private/dotfiles/*
+  failed_when: no

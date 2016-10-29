@@ -1,8 +1,21 @@
 ---
-- homebrew: update_homebrew=yes upgrade_all=yes
+- name: Install Homebrew.
+  command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  args:
+    creates: /usr/local/bin/brew
 
-- homebrew: name={{ item }} state=present
+- name: Update Homebrew and upgrade all packages.
+  homebrew: update_homebrew=yes upgrade_all=yes
+  changed_when: no
+
+- name: Tap Homebrew repositories.
+  homebrew_tap: name={{ item }}
+                state=present
+  with_items: "{{ homebrew_taps }}"
+
+- name: Install Homebrew formulas.
+  homebrew: name={{ item.name }}
+            install_options={{ item.options | default(omit) }}
+            state=present
   with_items: "{{ homebrew_packages }}"
-
-- homebrew: name={{ item.key }} state=present install_options={{ item.value }}
-  with_dict: "{{ homebrew_custom_packages }}"
+  register: homebrew_results

@@ -1,0 +1,17 @@
+---
+- name: Purge temporary macos-plists directory.
+  file: name=~/tmp/macos-plists
+        state=absent
+  changed_when: no
+
+- name: Clone macos-plists repository.
+  git: repo=https://github.com/byrondover/macos-plists.git
+       dest=~/tmp/macos-plists
+       force=yes
+  changed_when: no
+
+- name: Copy custom macos-plists into place.
+  command: ~/tmp/macos-plists/install.sh
+  args:
+    chdir: ~/tmp/macos-plists
+    creates: ~/Library/Preferences/sentinel.ignore

@@ -1,0 +1,23 @@
+---
+- name: Clone Prezto repository.
+  git: repo=https://github.com/sorin-ionescu/prezto.git
+       dest=~/.zprezto
+       recursive=yes
+  failed_when: no
+
+- name: Copy default Zsh configuration files into place.
+  file: src={{ item }}
+        dest=~/.{{ item.split('/') | last }}
+        state=link
+  with_fileglob: ~/.zprezto/runcoms/z*
+
+- name: Register current default shell.
+  become: yes
+  command: chsh -s /bin/zsh {{ whoami.stdout }}
+  register: chsh_status
+  changed_when: no
+
+- name: Set Zsh as default shell.
+  become: yes
+  command: chsh -s /bin/zsh {{ whoami.stdout }}
+  when: whoami.stdout in chsh_status.stdout
