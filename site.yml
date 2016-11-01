@@ -11,9 +11,9 @@
   roles:
     - setup
     - plists
-    - ssh
-    - dotfiles
     - homebrew
-    - pip
+    - ssh
     - zsh
+    - dotfiles
+    - pip
     - atom

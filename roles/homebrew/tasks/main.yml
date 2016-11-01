@@ -4,8 +4,8 @@
   args:
     creates: /usr/local/bin/brew
 
-- name: Update Homebrew and upgrade all packages.
-  homebrew: update_homebrew=yes upgrade_all=yes
+- name: Update Homebrew.
+  homebrew: update_homebrew=yes
   changed_when: no
 
 - name: Tap Homebrew repositories.
@@ -18,4 +18,11 @@
             install_options={{ item.options | default(omit) }}
             state=present
   with_items: "{{ homebrew_packages }}"
-  register: homebrew_results
+
+- name: Install Homebrew Cask kegs.
+  include: roles/common/tasks/brew_cask_install.yml
+  args:
+    name: "{{ item.name }}"
+    options: "{{ item.options | default(omit) }}"
+    app: "{{ item.app }}"
+  with_items: "{{ homebrew_cask_packages }}"

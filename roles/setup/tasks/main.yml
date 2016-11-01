@@ -31,3 +31,10 @@
   command: launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
   args:
     creates: /var/db/locate.database
+
+- name: Copy fonts into place.
+  copy: src={{ item }}
+        dest=~/Library/Fonts/
+        mode="u=rw,g=,o="
+  with_fileglob: ~/Drive/Shared/Fonts/*
+  failed_when: no

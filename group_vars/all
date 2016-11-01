@@ -36,19 +36,40 @@ homebrew_packages:
 homebrew_taps:
   - caskroom/cask
 
-homebrew_cask_packages:
-  - deluge
-  - flux
+#homebrew_cask_packages:
 #  - googleappengine
-  - handbrake
-  - jumpcut
-  - sequel-pro
-  - shiftit
-  - slack
+#  - handbrake
 #  - textmate
 #  - transmit
-  - tripmode
-  - vlc
+#  - tripmode
+
+homebrew_cask_packages:
+  - name: atom
+    app: /Applications/Atom.app
+  - name: caffeine
+    app: /Applications/Caffeine.app
+  - name: Deluge
+    app: /Applications/Deluge.app
+  - name: docker
+    app: /Applications/Docker.app
+  - name: flux
+    app: /Applications/Flux.app
+  - name: google-chrome
+    app: /Applications/Google Chrome.app
+  - name: google-drive
+    app: /Applications/Google Drive.app
+  - name: iterm2
+    app: /Applications/iTerm.
+  - name: jumpcut
+    app: /Applications/Jumpcut.app
+  - name: sequel-pro
+    app: /Applications/Sequel Pro.app
+  - name: shiftit
+    app: /Applications/ShiftIt.app
+  - name: slack
+    app: /Applications/Slack.app
+  - name: vlc
+    app: /Applications/VLC.app
 
 home_subdirectories:
   - bin

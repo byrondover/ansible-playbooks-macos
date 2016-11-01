@@ -1,0 +1,15 @@
+---
+- name: Brew cask pour {{ name }}.
+  homebrew_cask: name={{ name }}
+            install_options={{ options | default(omit) }}
+            state=present
+  register: brew_cask
+
+- block:
+  
+  - name: Open {{ app }}.
+    command: open '{{ app }}'
+
+  - pause: prompt='Press [Enter] to continue'
+
+  when: brew_cask.changed
