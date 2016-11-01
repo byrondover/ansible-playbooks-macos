@@ -7,6 +7,11 @@ atom_packages:
   - markdown-toc
   - pretty-json
 
+home_subdirectories:
+  - bin
+  - code/workshop
+  - tmp
+
 homebrew_packages:
   - name: ansible
   - name: coreutils
@@ -36,13 +41,6 @@ homebrew_packages:
 homebrew_taps:
   - caskroom/cask
 
-#homebrew_cask_packages:
-#  - googleappengine
-#  - handbrake
-#  - textmate
-#  - transmit
-#  - tripmode
-
 homebrew_cask_packages:
   - name: atom
     app: /Applications/Atom.app
@@ -71,10 +69,12 @@ homebrew_cask_packages:
   - name: vlc
     app: /Applications/VLC.app
 
-home_subdirectories:
-  - bin
-  - code/workshop
-  - tmp
+legacy_homebrew_cask_packages:
+  - googleappengine
+  - handbrake
+  - textmate
+  - transmit
+  - tripmode
 
 pip_packages:
   - requests
