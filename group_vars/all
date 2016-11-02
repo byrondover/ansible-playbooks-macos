@@ -57,7 +57,7 @@ homebrew_cask_packages:
   - name: google-drive
     app: /Applications/Google Drive.app
   - name: iterm2
-    app: /Applications/iTerm.
+    app: /Applications/iTerm.app
   - name: jumpcut
     app: /Applications/Jumpcut.app
   - name: sequel-pro
