@@ -12,4 +12,6 @@
 
   - pause: prompt='Press [Enter] to continue'
 
-  when: app && brew_cask.changed
+  when:
+    - app
+    - brew_cask.changed
