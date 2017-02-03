@@ -58,14 +58,22 @@ homebrew_cask_packages:
     app: /Applications/Google Drive.app
   - name: iterm2
     app: /Applications/iTerm.app
+  - name: java
   - name: jumpcut
     app: /Applications/Jumpcut.app
+  - name: postman
+    app: /Applications/Postman.app
   - name: sequel-pro
     app: /Applications/Sequel Pro.app
   - name: shiftit
     app: /Applications/ShiftIt.app
   - name: slack
     app: /Applications/Slack.app
+  - name: sling
+    app: /Applications/Sling.app
+  - name: tripmode
+  - name: unrarx
+    app: /Applications/UnRarX.app
   - name: vlc
     app: /Applications/VLC.app
 

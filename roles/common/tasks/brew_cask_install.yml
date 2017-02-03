@@ -6,10 +6,10 @@
   register: brew_cask
 
 - block:
-  
+
   - name: Open {{ app }}.
     command: open '{{ app }}'
 
   - pause: prompt='Press [Enter] to continue'
 
-  when: brew_cask.changed
+  when: app && brew_cask.changed
