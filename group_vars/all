@@ -1,6 +1,7 @@
 ---
 atom_packages:
   - atom-typescript
+  - go-plus
   - language-docker
   - language-groovy
   - language-puppet
@@ -9,6 +10,9 @@ atom_packages:
 
 home_subdirectories:
   - bin
+  - code/go/bin
+  - code/go/pkg
+  - code/go/src
   - code/workshop
   - tmp
 
