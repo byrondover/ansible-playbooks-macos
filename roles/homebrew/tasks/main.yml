@@ -13,12 +13,6 @@
                 state=present
   with_items: "{{ homebrew_taps }}"
 
-- name: Install Homebrew formulas.
-  homebrew: name={{ item.name }}
-            install_options={{ item.options | default(omit) }}
-            state=present
-  with_items: "{{ homebrew_packages }}"
-
 - name: Install Homebrew Cask kegs.
   include: roles/common/tasks/brew_cask_install.yml
   args:
@@ -26,3 +20,9 @@
     options: "{{ item.options | default(omit) }}"
     app: "{{ item.app }}"
   with_items: "{{ homebrew_cask_packages }}"
+
+- name: Install Homebrew formulas.
+  homebrew: name={{ item.name }}
+            install_options={{ item.options | default(omit) }}
+            state=present
+  with_items: "{{ homebrew_packages }}"

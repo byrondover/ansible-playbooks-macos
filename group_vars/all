@@ -20,70 +20,89 @@ homebrew_packages:
   - name: ansible
   - name: coreutils
   - name: cowsay
+  - name: docker-compose
   - name: ffmpeg
     options: with-faac,with-fdk-aac,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libebur128,with-libsoxr,with-libssh,with-libtesseract,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openh264,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-rubberband,with-schroedinger,with-snappy,with-speex,with-tesseract,with-theora,with-tools,with-webp,with-x265,with-xz,with-zimg
   - name: fortune
   - name: gnu-typist
   - name: go
   - name: httpie
-  - name: htop-osx
+  - name: htop
   - name: hugo
   - name: p7zip
   - name: python3
   - name: mysql
   - name: nmap
   - name: node
-    options: with-debug
   - name: tmux
   - name: tree
   - name: watch
   - name: wget
     options: with-iri
+  - name: yarn
   - name: youtube-dl
     options: with-rtmpdump
 
 homebrew_taps:
-  - caskroom/cask
+  - homebrew/cask
 
 homebrew_cask_packages:
-  - name: atom
-    app: /Applications/Atom.app
+  - name: airserver
+    app: /Applications/AirServer.app
   - name: caffeine
     app: /Applications/Caffeine.app
-  - name: Deluge
+  - name: dash
+    app: /Applications/Dash.app
+  - name: db-browser-for-sqlite
+    app: /Applications/DB Browser for SQLite.app
+  - name: deluge
     app: /Applications/Deluge.app
+  - name: discord
+    app: /Applications/Discord.app
   - name: docker
     app: /Applications/Docker.app
   - name: flux
     app: /Applications/Flux.app
+  - name: google-backup-and-sync
+    app: /Applications/Backup and Sync.app
   - name: google-chrome
     app: /Applications/Google Chrome.app
-  - name: google-drive
-    app: /Applications/Google Drive.app
+  - name: handbrake
+    app: /Applications/HandBrake.app
+  - name: insomnia
+    app: /Applications/Insomnia.app
   - name: iterm2
     app: /Applications/iTerm.app
   - name: java
   - name: jumpcut
     app: /Applications/Jumpcut.app
-  - name: postman
-    app: /Applications/Postman.app
+  - name: league-of-legends
+    app: /Applications/League of Legends.app
+  - name: nvidia-geforce-now
+    app: /Applications/NVIDIA GeForce NOW.app
   - name: sequel-pro
     app: /Applications/Sequel Pro.app
   - name: shiftit
     app: /Applications/ShiftIt.app
   - name: slack
     app: /Applications/Slack.app
-  - name: sling
-    app: /Applications/Sling.app
+  - name: steam
+    app: /Applications/Steam.app
   - name: tripmode
+    app: /Applications/TripMode.app
   - name: unrarx
     app: /Applications/UnRarX.app
+  - name: visual-studio-code
+    app: /Applications/Visual Studio Code.app
   - name: vlc
     app: /Applications/VLC.app
 
 legacy_homebrew_cask_packages:
+  - atom
   - googleappengine
   - handbrake
+  - postman
+  - sling
   - textmate
   - transmit
   - tripmode
