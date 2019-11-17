@@ -18,39 +18,60 @@ home_subdirectories:
 
 homebrew_packages:
   - name: ansible
+  - name: awscli
   - name: coreutils
   - name: cowsay
+  - name: curl
   - name: docker-compose
   - name: ffmpeg
-    options: with-faac,with-fdk-aac,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libebur128,with-libsoxr,with-libssh,with-libtesseract,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openh264,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-rubberband,with-schroedinger,with-snappy,with-speex,with-tesseract,with-theora,with-tools,with-webp,with-x265,with-xz,with-zimg
+    # options: with-faac,with-fdk-aac,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libebur128,with-libsoxr,with-libssh,with-libtesseract,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openh264,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-rubberband,with-schroedinger,with-snappy,with-speex,with-tesseract,with-theora,with-tools,with-webp,with-x265,with-xz,with-zimg
   - name: fortune
   - name: gnu-typist
   - name: go
   - name: httpie
   - name: htop
   - name: hugo
-  - name: p7zip
-  - name: python3
+  - name: kafka
+  - name: kafkacat
+  - name: lastpass-cli
   - name: mysql
   - name: nmap
   - name: node
+  - name: nvm
+  - name: p7zip
+  - name: pipenv
+  - name: postgresql
+  - name: python3
+  - name: readline
+  - name: sqlite
+  - name: telnet
+  - name: terraform
   - name: tmux
   - name: tree
   - name: watch
   - name: wget
-    options: with-iri
   - name: yarn
   - name: youtube-dl
-    options: with-rtmpdump
 
 homebrew_taps:
+  - confluentinc/ccloud
   - homebrew/cask
 
+
+
 homebrew_cask_packages:
+  - name: adobe-creative-cloud
+    app: /Applications/Adobe Creative Cloud/Adobe Creative Cloud
   - name: airserver
     app: /Applications/AirServer.app
-  - name: caffeine
-    app: /Applications/Caffeine.app
+  - name: android-studio
+    app: /Applications/Android Studio.app
+  - name: angry-ip-scanner
+    app: /Applications/Angry IP Scanner
+  - name: apache-directory-studio
+    app: /Applications/ApacheDirectoryStudio
+  - name: battle-net
+    app: /Applications/Battle.net.app
   - name: dash
     app: /Applications/Dash.app
   - name: db-browser-for-sqlite
@@ -67,6 +88,10 @@ homebrew_cask_packages:
     app: /Applications/Backup and Sync.app
   - name: google-chrome
     app: /Applications/Google Chrome.app
+  - name: google-drive
+    app: /Applications/Google Drive.app
+  - name: google-drive-file-stream
+    app: /Applications/Google Drive File Stream.app
   - name: handbrake
     app: /Applications/HandBrake.app
   - name: insomnia
@@ -74,10 +99,18 @@ homebrew_cask_packages:
   - name: iterm2
     app: /Applications/iTerm.app
   - name: java
+  - name: jdiskreport
+    app: /Applications/JDiskReport.app
   - name: jumpcut
     app: /Applications/Jumpcut.app
+  - name: keepingyouawake
+    app: /Applications/KeepingYouAwake.app
   - name: league-of-legends
     app: /Applications/League of Legends.app
+  - name: microsoft-remote-desktop-beta
+    app: /Applications/Microsoft Remote Desktop Beta.app
+  - name: nordvpn
+    app: /Applications/NordVPN.app
   - name: nvidia-geforce-now
     app: /Applications/NVIDIA GeForce NOW.app
   - name: sequel-pro
@@ -88,8 +121,12 @@ homebrew_cask_packages:
     app: /Applications/Slack.app
   - name: steam
     app: /Applications/Steam.app
+  - name: transmit
+    app: /Applications/Transmit.app
   - name: tripmode
     app: /Applications/TripMode.app
+  - name: unity
+    app: /Applications/Unity/Unity.app
   - name: unrarx
     app: /Applications/UnRarX.app
   - name: visual-studio-code
@@ -99,13 +136,12 @@ homebrew_cask_packages:
 
 legacy_homebrew_cask_packages:
   - atom
+  - cypress
   - googleappengine
-  - handbrake
+  - league-displays
   - postman
   - sling
   - textmate
-  - transmit
-  - tripmode
 
 pip_packages:
   - requests
