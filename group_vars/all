@@ -120,6 +120,8 @@ homebrew_cask_packages:
     app: /Applications/TripMode.app
   - name: the-unarchiver
     app: /Applications/The Unarchiver.app
+  - name: twitch
+    app: /Applications/Twitch.app
   - name: unity
     app: /Applications/Unity/Unity.app
   - name: visual-studio-code
