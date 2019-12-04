@@ -57,8 +57,6 @@ homebrew_taps:
   - confluentinc/ccloud
   - homebrew/cask
 
-
-
 homebrew_cask_packages:
   - name: adobe-creative-cloud
     app: /Applications/Adobe Creative Cloud/Adobe Creative Cloud
@@ -67,11 +65,9 @@ homebrew_cask_packages:
   - name: android-studio
     app: /Applications/Android Studio.app
   - name: angry-ip-scanner
-    app: /Applications/Angry IP Scanner
+    app: /Applications/Angry IP Scanner.app
   - name: apache-directory-studio
-    app: /Applications/ApacheDirectoryStudio
-  - name: battle-net
-    app: /Applications/Battle.net.app
+    app: /Applications/ApacheDirectoryStudio.app
   - name: dash
     app: /Applications/Dash.app
   - name: db-browser-for-sqlite
@@ -88,12 +84,13 @@ homebrew_cask_packages:
     app: /Applications/Backup and Sync.app
   - name: google-chrome
     app: /Applications/Google Chrome.app
-  - name: google-drive
-    app: /Applications/Google Drive.app
   - name: google-drive-file-stream
     app: /Applications/Google Drive File Stream.app
   - name: handbrake
     app: /Applications/HandBrake.app
+  - name: homebrew/cask-versions/adoptopenjdk8
+  - name: homebrew/cask-versions/microsoft-remote-desktop-beta
+    app: /Applications/Microsoft Remote Desktop Beta.app
   - name: insomnia
     app: /Applications/Insomnia.app
   - name: iterm2
@@ -105,10 +102,6 @@ homebrew_cask_packages:
     app: /Applications/Jumpcut.app
   - name: keepingyouawake
     app: /Applications/KeepingYouAwake.app
-  - name: league-of-legends
-    app: /Applications/League of Legends.app
-  - name: microsoft-remote-desktop-beta
-    app: /Applications/Microsoft Remote Desktop Beta.app
   - name: nordvpn
     app: /Applications/NordVPN.app
   - name: nvidia-geforce-now
@@ -117,18 +110,17 @@ homebrew_cask_packages:
     app: /Applications/Sequel Pro.app
   - name: shiftit
     app: /Applications/ShiftIt.app
-  - name: slack
-    app: /Applications/Slack.app
   - name: steam
     app: /Applications/Steam.app
+  - name: steermouse
   - name: transmit
     app: /Applications/Transmit.app
   - name: tripmode
     app: /Applications/TripMode.app
+  - name: the-unarchiver
+    app: /Applications/The Unarchiver.app
   - name: unity
     app: /Applications/Unity/Unity.app
-  - name: unrarx
-    app: /Applications/UnRarX.app
   - name: visual-studio-code
     app: /Applications/Visual Studio Code.app
   - name: vlc
@@ -136,12 +128,17 @@ homebrew_cask_packages:
 
 legacy_homebrew_cask_packages:
   - atom
+  - battle-net
   - cypress
+  - google-drive
   - googleappengine
   - league-displays
+  - league-of-legends
   - postman
+  - slack
   - sling
   - textmate
+  - unrarx
 
 pip_packages:
   - requests
