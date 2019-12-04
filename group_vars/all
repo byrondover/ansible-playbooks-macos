@@ -88,6 +88,7 @@ homebrew_cask_packages:
     app: /Applications/Google Drive File Stream.app
   - name: handbrake
     app: /Applications/HandBrake.app
+  - name: homebrew/cask-drivers/steelseries-engine
   - name: homebrew/cask-versions/adoptopenjdk8
   - name: homebrew/cask-versions/microsoft-remote-desktop-beta
     app: /Applications/Microsoft Remote Desktop Beta.app
