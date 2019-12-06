@@ -26,6 +26,15 @@
   command: chflags nohidden ~/Library
   when: "'hidden' in ls_library.stdout"
 
+- name: Configure macOS system settings
+  osx_defaults:
+    # System Preferences & Globals
+    domain: Apple Global Domain
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+    type: "{{ item.value | type_debug | regex_replace('str.*', 'string') }}"
+  loop: "{{ macos_defaults | dict2items }}"
+
 - name: Create locate database.
   become: yes
   command: launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist

@@ -1,0 +1,18 @@
+macos_defaults:
+  AppleInterfaceStyle: Dark
+  # Keyboard / Keyboard / Key Repeat
+  KeyRepeat: 1
+  # Keyboard / Keyboard / Delay Until Repeat
+  InitialKeyRepeat: 20
+  # Keyboard / Text / Correct spelling automatically
+  NSAutomaticSpellingCorrectionEnabled: false
+  # Keyboard / Text / Use smart quotes and dashes
+  NSAutomaticDashSubstitutionEnabled: false
+  NSAutomaticQuoteSubstitutionEnabled: false
+  # Disable the character accent menu when holding down a key
+  ApplePressAndHoldEnabled: false
+
+
+tags:
+  Environment: dev
+  Application: payment
