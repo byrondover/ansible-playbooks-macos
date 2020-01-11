@@ -18,7 +18,7 @@
   args:
     name: "{{ item.name }}"
     options: "{{ item.options | default(omit) }}"
-    app: "{{ item.app | default(omit) }}"
+    app: "{{ item.app | default('') }}"
   with_items: "{{ homebrew_cask_packages }}"
 
 - name: Install Homebrew formulas.

@@ -13,5 +13,5 @@
   - pause: prompt='Press [Enter] to continue'
 
   when:
-    - app is defined
+    - app is defined and app != ''
     - brew_cask.changed
