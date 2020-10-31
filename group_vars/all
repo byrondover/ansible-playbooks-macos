@@ -58,26 +58,27 @@ homebrew_packages:
   - name: youtube-dl
 
 homebrew_taps:
-  - confluentinc/ccloud
   - homebrew/cask
 
 homebrew_cask_packages:
+  - name: homebrew/cask-drivers/steelseries-engine
+  - name: homebrew/cask-versions/adoptopenjdk8
   - name: adobe-creative-cloud
     app: /Applications/Adobe Creative Cloud/Adobe Creative Cloud
-  - name: airserver
-    app: /Applications/AirServer.app
+  # - name: airserver
+  #   app: /Applications/AirServer.app
   - name: android-studio
     app: /Applications/Android Studio.app
-  - name: angry-ip-scanner
-    app: /Applications/Angry IP Scanner.app
+  # - name: angry-ip-scanner
+  #   app: /Applications/Angry IP Scanner.app
   - name: apache-directory-studio
     app: /Applications/ApacheDirectoryStudio.app
   - name: beekeeper-studio
     app: /Applications/Beekeeper Studio.app
   - name: dash
     app: /Applications/Dash.app
-  - name: db-browser-for-sqlite
-    app: /Applications/DB Browser for SQLite.app
+  # - name: db-browser-for-sqlite
+  #   app: /Applications/DB Browser for SQLite.app
   - name: deluge
     app: /Applications/Deluge.app
   - name: discord
@@ -94,15 +95,13 @@ homebrew_cask_packages:
   #   app: /Applications/Google Drive File Stream.app
   - name: handbrake
     app: /Applications/HandBrake.app
-  - name: homebrew/cask-drivers/steelseries-engine
-  - name: homebrew/cask-versions/adoptopenjdk8
   # - name: homebrew/cask-versions/microsoft-remote-desktop-beta
   #   app: /Applications/Microsoft Remote Desktop Beta.app
   - name: insomnia
     app: /Applications/Insomnia.app
   - name: iterm2
     app: /Applications/iTerm.app
-  - name: java
+  # - name: java
   - name: jdiskreport
     app: /Applications/JDiskReport.app
   - name: jumpcut
