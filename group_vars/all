@@ -102,8 +102,8 @@ homebrew_cask_packages:
   - name: iterm2
     app: /Applications/iTerm.app
   # - name: java
-  - name: jdiskreport
-    app: /Applications/JDiskReport.app
+  # - name: jdiskreport
+  #   app: /Applications/JDiskReport.app
   - name: jumpcut
     app: /Applications/Jumpcut.app
   - name: keepingyouawake
@@ -113,8 +113,8 @@ homebrew_cask_packages:
     app: /Applications/NordVPN.app
   - name: nvidia-geforce-now
     app: /Applications/NVIDIA GeForce NOW.app
-  - name: sequel-pro
-    app: /Applications/Sequel Pro.app
+  # - name: sequel-pro
+  #   app: /Applications/Sequel Pro.app
   - name: shiftit
     app: /Applications/ShiftIt.app
   - name: steam
