@@ -22,6 +22,7 @@ homebrew_packages:
   - name: coreutils
   - name: cowsay
   - name: curl
+  - name: diff-so-fancy
   - name: docker-compose
   - name: ffmpeg
     # options: with-faac,with-fdk-aac,with-fontconfig,with-freetype,with-frei0r,with-libass,with-libbluray,with-libbs2b,with-libcaca,with-libebur128,with-libsoxr,with-libssh,with-libtesseract,with-libvidstab,with-libvorbis,with-libvpx,with-opencore-amr,with-openh264,with-openjpeg,with-openssl,with-opus,with-rtmpdump,with-rubberband,with-schroedinger,with-snappy,with-speex,with-tesseract,with-theora,with-tools,with-webp,with-x265,with-xz,with-zimg
@@ -31,13 +32,16 @@ homebrew_packages:
   - name: httpie
   - name: htop
   - name: hugo
+  - name: jq
   - name: kafka
   - name: kafkacat
   - name: lastpass-cli
   - name: mysql
+  - name: mtr
   - name: nmap
   - name: node
   - name: nvm
+  - name: openssl
   - name: p7zip
   - name: pipenv
   - name: postgresql
@@ -68,6 +72,8 @@ homebrew_cask_packages:
     app: /Applications/Angry IP Scanner.app
   - name: apache-directory-studio
     app: /Applications/ApacheDirectoryStudio.app
+  - name: beekeeper-studio
+    app: /Applications/Beekeeper Studio.app
   - name: dash
     app: /Applications/Dash.app
   - name: db-browser-for-sqlite
@@ -78,20 +84,20 @@ homebrew_cask_packages:
     app: /Applications/Discord.app
   - name: docker
     app: /Applications/Docker.app
-  - name: flux
-    app: /Applications/Flux.app
+  # - name: flux
+  #   app: /Applications/Flux.app
   - name: google-backup-and-sync
     app: /Applications/Backup and Sync.app
-  - name: google-chrome
-    app: /Applications/Google Chrome.app
-  - name: google-drive-file-stream
-    app: /Applications/Google Drive File Stream.app
+  # - name: google-chrome
+  #   app: /Applications/Google Chrome.app
+  # - name: google-drive-file-stream
+  #   app: /Applications/Google Drive File Stream.app
   - name: handbrake
     app: /Applications/HandBrake.app
   - name: homebrew/cask-drivers/steelseries-engine
   - name: homebrew/cask-versions/adoptopenjdk8
-  - name: homebrew/cask-versions/microsoft-remote-desktop-beta
-    app: /Applications/Microsoft Remote Desktop Beta.app
+  # - name: homebrew/cask-versions/microsoft-remote-desktop-beta
+  #   app: /Applications/Microsoft Remote Desktop Beta.app
   - name: insomnia
     app: /Applications/Insomnia.app
   - name: iterm2
@@ -103,6 +109,7 @@ homebrew_cask_packages:
     app: /Applications/Jumpcut.app
   - name: keepingyouawake
     app: /Applications/KeepingYouAwake.app
+  - name: ngrok
   - name: nordvpn
     app: /Applications/NordVPN.app
   - name: nvidia-geforce-now
