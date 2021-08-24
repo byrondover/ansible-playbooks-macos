@@ -56,6 +56,7 @@ homebrew_packages:
   - name: wget
   - name: yarn
   - name: youtube-dl
+  - name: yq
 
 homebrew_taps:
   - homebrew/cask
