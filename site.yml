@@ -5,8 +5,8 @@
 - hosts: local
 
   pre_tasks:
-    - include: roles/common/tasks/whoami.yml
-    - include: roles/common/tasks/home_subdirs.yml
+    - import_tasks: roles/common/tasks/whoami.yml
+    - import_tasks: roles/common/tasks/home_subdirs.yml
 
   roles:
     - setup

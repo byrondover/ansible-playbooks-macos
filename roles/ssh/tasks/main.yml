@@ -8,5 +8,5 @@
   copy: src={{ item }}
         dest=~/.ssh/
         mode="u=rw,g=,o="
-  with_fileglob: ~/Drive/Shared/Private/ssh/*
+  with_fileglob: ~/Google Drive/My Drive/Shared/Private/ssh/*
   failed_when: no

@@ -1,21 +1,21 @@
 ---
-- name: Install Homebrew.
-  command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  args:
-    creates: /usr/local/bin/brew
+#- name: Install Homebrew.
+#  command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#  args:
+#    creates: /usr/local/bin/brew
 
 - name: Update Homebrew.
   homebrew: update_homebrew=yes
   changed_when: no
 
-- name: Tap Homebrew repositories.
-  homebrew_tap: name={{ item }}
-                state=present
-  with_items: "{{ homebrew_taps }}"
+#- name: Tap Homebrew repositories.
+#  homebrew_tap: name={{ item }}
+#                state=present
+#  with_items: "{{ homebrew_taps }}"
 
 - name: Install Homebrew Cask kegs.
-  include: roles/common/tasks/brew_cask_install.yml
-  args:
+  include_tasks: roles/common/tasks/brew_cask_install.yml
+  vars:
     name: "{{ item.name }}"
     options: "{{ item.options | default(omit) }}"
     app: "{{ item.app | default('') }}"

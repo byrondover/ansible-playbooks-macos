@@ -35,12 +35,13 @@ homebrew_packages:
   - name: jq
   - name: kafka
   - name: kafkacat
-  - name: lastpass-cli
+  # - name: lastpass-cli
   - name: mysql
   - name: mtr
   - name: nmap
   - name: node
   - name: nvm
+  - name: openjdk
   - name: openssl
   - name: p7zip
   - name: pipenv
@@ -57,25 +58,28 @@ homebrew_packages:
   - name: yarn
   - name: youtube-dl
   - name: yq
+  - name: yt-dlp
 
 homebrew_taps:
   - homebrew/cask
 
 homebrew_cask_packages:
-  - name: homebrew/cask-drivers/steelseries-engine
-  - name: homebrew/cask-versions/adoptopenjdk8
+  - name: google-drive
+    app: /Applications/Google Drive.app
+  - name: google-cloud-sdk
+  - name: microsoft-openjdk
   - name: adobe-creative-cloud
     app: /Applications/Adobe Creative Cloud/Adobe Creative Cloud
   # - name: airserver
   #   app: /Applications/AirServer.app
-  - name: android-studio
-    app: /Applications/Android Studio.app
+  # - name: android-studio
+  #   app: /Applications/Android Studio.app
   # - name: angry-ip-scanner
   #   app: /Applications/Angry IP Scanner.app
-  - name: apache-directory-studio
-    app: /Applications/ApacheDirectoryStudio.app
-  - name: beekeeper-studio
-    app: /Applications/Beekeeper Studio.app
+  # - name: apache-directory-studio
+  #   app: /Applications/ApacheDirectoryStudio.app
+  # - name: beekeeper-studio
+  #   app: /Applications/Beekeeper Studio.app
   - name: dash
     app: /Applications/Dash.app
   # - name: db-browser-for-sqlite
@@ -88,16 +92,14 @@ homebrew_cask_packages:
     app: /Applications/Docker.app
   # - name: flux
   #   app: /Applications/Flux.app
-  - name: google-backup-and-sync
-    app: /Applications/Backup and Sync.app
   # - name: google-chrome
   #   app: /Applications/Google Chrome.app
   # - name: google-drive-file-stream
   #   app: /Applications/Google Drive File Stream.app
-  - name: handbrake
-    app: /Applications/HandBrake.app
-  # - name: homebrew/cask-versions/microsoft-remote-desktop-beta
-  #   app: /Applications/Microsoft Remote Desktop Beta.app
+  # - name: handbrake
+  #   app: /Applications/HandBrake.app
+  - name: microsoft-remote-desktop
+    app: /Applications/Microsoft Remote Desktop.app
   - name: insomnia
     app: /Applications/Insomnia.app
   - name: iterm2
@@ -109,9 +111,9 @@ homebrew_cask_packages:
     app: /Applications/Jumpcut.app
   - name: keepingyouawake
     app: /Applications/KeepingYouAwake.app
-  - name: ngrok
-  - name: nordvpn
-    app: /Applications/NordVPN.app
+  # - name: ngrok
+  # - name: nordvpn
+  #   app: /Applications/NordVPN.app
   - name: nvidia-geforce-now
     app: /Applications/NVIDIA GeForce NOW.app
   # - name: sequel-pro
@@ -120,17 +122,19 @@ homebrew_cask_packages:
     app: /Applications/ShiftIt.app
   - name: steam
     app: /Applications/Steam.app
-  - name: steermouse
-  - name: transmit
-    app: /Applications/Transmit.app
+  # - name: steelseries-gg
+  #   app: /Applications/SteelSeries GG/SteelSeries GG.app
+  # - name: steermouse
+  # - name: transmit
+  #  app: /Applications/Transmit.app
   - name: tripmode
     app: /Applications/TripMode.app
   - name: the-unarchiver
     app: /Applications/The Unarchiver.app
   # - name: twitch
   #   app: /Applications/Twitch.app
-  - name: unity
-    app: /Applications/Unity/Unity.app
+  # - name: unity
+  #   app: /Applications/Unity/Unity.app
   - name: visual-studio-code
     app: /Applications/Visual Studio Code.app
   - name: vlc

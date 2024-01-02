@@ -19,5 +19,5 @@
   copy: src={{ item }}
         dest=~/.{{ item.split('/') | last }}
         mode="u=rw,g=,o="
-  with_fileglob: ~/Drive/Shared/Private/dotfiles/*
+  with_fileglob: ~/Google Drive/My Drive/Shared/Private/dotfiles/*
   failed_when: no
