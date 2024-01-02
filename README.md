@@ -1,6 +1,6 @@
 # Ansible Playbooks - macOS
 
-Ansible automation scripts for use with macOS Sierra.
+Ansible automation scripts for use with macOS Sonoma.
 
 ## Setup
 
